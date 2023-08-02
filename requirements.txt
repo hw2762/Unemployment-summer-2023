@@ -8,4 +8,11 @@ pandas
 
 python-dotenv
 
+# for testing:
+pytest
 
+
+# use for web app
+
+flask # <--- ADD FOR WEB APP
+#gunicorn
