@@ -1,5 +1,6 @@
-# Unemployment-summer-2023
+# unemployment-inclass-summer-2023
 
+![tests](https://github.com/s2t2/unemployment-2023-testing-prep/actions/workflows/python-app.yml/badge.svg)
 
 ## Setup
 
@@ -10,7 +11,6 @@ Obtain an [AlphaVantage API Key](https://www.alphavantage.co/support/#api-key). 
 
 ALPHAVANTAGE_API_KEY="____________"
 ```
-
 
 Create a virtual environment:
 
@@ -30,20 +30,39 @@ pip install -r requirements.txt
 
 ## Usage
 
-Run the report:
+Run the unemployment report:
 
 ```sh
-python app/unemployment.py
-
 python -m app.unemployment
+```
+
+
+Run the stocks report:
+
+```sh
+python -m app.stocks
+```
+
+
+Run the web app:
+
+```sh
+# Mac OS:
+FLASK_APP=web_app flask run
+
+# Windows OS:
+# ... if `export` doesn't work for you, try `set` instead
+# ... or try a ".env" file approach
+export FLASK_APP=web_app
+flask run
+```
 
 
 ## Testing
-
-Run tests:
 
 ```sh
 pytest
 ```
 
-FLASK_APP=web_app flask run
+
+## [Deployment Guide](/DEPLOYING.md)
